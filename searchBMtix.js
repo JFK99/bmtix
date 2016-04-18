@@ -2,7 +2,7 @@
 
 var myEmail = "";
 var myEmailPassword = "";
-var craigsListCity = "sfo"; // sfo = san francisco, losangeles = los angeles, etc... look on craigslist for other cities 
+var craigslistCity = "sfo"; // sfo = san francisco, losangeles = los angeles, etc... look on craigslist for other cities 
 
 // Do not change below
 
@@ -24,7 +24,7 @@ new CronJob('0 * * * * *', function() {
 
 
 client = craigslist({
-    city : 'sfbay'
+    city : craigslistCity
   }),
   options = {
     //category : 'tix',
