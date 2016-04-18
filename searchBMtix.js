@@ -1,3 +1,11 @@
+// Change the configuration below - works only with Gmail
+
+var myEmail = "";
+var myEmailPassword = "";
+var craigsListCity = "sfo"; // sfo = san francisco, losangeles = los angeles, etc... look on craigslist for other cities 
+
+// Do not change below
+
 var i = 0;  // dots counter
 setInterval(function() {
   process.stdout.clearLine();  // clear current text
@@ -30,14 +38,14 @@ client.search('burning man tickets', function (err, listings) {
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'YOUR EMAIL HERE', // Your email id
-        pass: 'YOUR PASSWORD HERE' // Your password
+        user: myEmail, // Your email id
+        pass: myEmailPassword // Your password
     }
   });
   var text = 'Tickets for BM:';
   var mailOptions = {
-    from: 'YOUR EMAIL', // sender address
-    to: 'YOUR EMAIL', // list of receivers
+    from: myEmail, // sender address
+    to: myEmail, // list of receivers
     subject: 'Burning Man Tickets', // Subject line
     text: text //, // plaintext body
   };
